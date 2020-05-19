@@ -1,0 +1,19 @@
+form {
+  border: 2px solid #5c4343;
+  border-radius: 3px;
+  padding: 40px;
+}
+
+input {
+  padding: 5px 20px;
+  width: 100%;
+  line-height: 25px;
+  margin: 10px 0;
+  border: 1px solid #5c4343;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+}

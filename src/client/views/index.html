@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>NLP by Zahidur</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="site-header-content">
+                <h1 class="site-title">
+                  NLP by Zahidur
+                </h1>
+                <h2 class="site-description">
+                    Evaluate a news article with Natural Language Processing
+                </h2>
+              </div>
+        </header>
+
+        <main>
+            <section class="errors">
+                <span class="close-btn" onclick="return Client.closeErrorMsg()">&#10005;</span>
+                <div id="error"></div>
+            </section>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="url" type="text" name="input" value="" placeholder="Enter an article link">
+                    <input type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+            <section>
+                <ul>
+                    <li>
+                        <strong>Text Polarity:</strong>
+                        <p id="polarity"></p>
+                        <strong>Text Subjectivity:</strong>
+                        <p id="subjectivity"></p>
+                        <strong>Polarity Confidence:</strong>
+                        <p id="polarity_confidence"></p>
+                        <strong>Subjectivity Confidence:</strong>
+                        <p id="subjectivity_confidence"></p>
+                        <strong>Text Excerpt:</strong>
+                        <h4 id="full_text"></h4>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2020 Zahidur</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>

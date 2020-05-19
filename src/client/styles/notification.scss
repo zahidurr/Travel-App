@@ -1,0 +1,24 @@
+/* The notification message box */
+.errors {
+  padding: 15px;
+  background-color: #cc4d44;
+  color: white;
+  margin-bottom: 10px;
+  display: none;
+}
+
+/* The close button */
+.close-btn {
+  margin-left: 10px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: black;
+}
