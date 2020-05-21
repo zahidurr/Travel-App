@@ -1,5 +1,5 @@
 const geonamesURL = "http://api.geonames.org/searchJSON?q=";
-const userName = "&username=liminjun88";
+const userName = "&username=GeonamesUsername";
 
 const apiURL = "http://localhost:8081";
 
