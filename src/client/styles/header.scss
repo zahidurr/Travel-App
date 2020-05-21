@@ -1,11 +1,17 @@
 /* Site Header */
-header {
-  display: flex;
-  min-height: 150px;
-  width: auto;
-  border-bottom: 2px solid rgb(65, 65, 65);
-  justify-content: center;
-  align-items: center;
+
+.site-header {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: color(var(--white)) no-repeat center center;
+  background-size: cover;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.site-header.no-cover:before,
+.site-header.no-cover:after {
+  display: none;
 }
 
 .site-header-content {
@@ -13,6 +19,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 200px;
   height: 10vh;
   padding: 0 4vw;
   text-align: center;
@@ -21,10 +28,13 @@ header {
 .site-title {
   z-index: 10;
   margin: 0;
-  padding: 40px 0 10px 0;
-  font-size: 2.8rem;
-  font-weight: 400;
-  color: #5c4343;
+  padding: 20px 0 10px 0;
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+
+.site-logo {
+  max-height: 45px;
 }
 
 .site-description {
@@ -32,6 +42,7 @@ header {
   margin: 0;
   padding: 5px 0;
   font-size: 16px;
+  /* change to 16px 700 weight here */
   font-weight: 300;
   letter-spacing: 0.5px;
   color: var(--midnightblue);

@@ -1,16 +1,18 @@
-## Evaluate a News Article with Natural Language Processing
+## Travel Planner
 
-This app allows user to analyze article link using Aylien NLP API service.
+This app allows users to make their own Travel Planner
 
 ### Prerequisites
 
 - Install `node`
 - Install `npm`
-- Create and fill the .env file with API keys like this:
+- Create and fill the .env file with API keys from Geonames, Darksky, and Pixabay like this:
 
 ```
-API_ID=**************************
-API_KEY=**************************
+GeonamesUsername=********************
+darkSkyKEY=**************************
+pixabayKEY=**************************
+PORT = 8081
 ```
 
 ### How to run
@@ -43,4 +45,8 @@ API_KEY=**************************
 - Jest
 - Babel
 - Express
-- Aylien textapi
+- Geonames, Darksky, and Pixabay
+
+### Screenshots
+
+![Screenshot](screenshots/1.png)

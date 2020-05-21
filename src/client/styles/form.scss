@@ -1,7 +1,10 @@
-form {
-  border: 2px solid #5c4343;
-  border-radius: 3px;
-  padding: 40px;
+section.section-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c5a5eb center center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 input {
@@ -14,6 +17,13 @@ input {
 
 input[type="submit"] {
   background-color: #4caf50;
+  border: none;
+  color: white;
+}
+
+input[type="button"],
+button {
+  background-color: #474242;
   border: none;
   color: white;
 }

@@ -22,6 +22,12 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(html)$/,
+        use: {
+          loader: "html-loader",
+        },
+      },
+      {
         test: "/.js$/",
         exclude: /node_modules/,
         loader: "babel-loader",
@@ -30,12 +36,16 @@ module.exports = {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ["file-loader"],
+      },
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/client/views/index.html",
-      filename: "index.html",
+      filename: "./index.html",
     }),
     new WorkboxPlugin.GenerateSW(),
     new CleanWebpackPlugin(),

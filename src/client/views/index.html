@@ -1,63 +1,88 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>NLP by Zahidur</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Planner by Zahidur</title>
+  </head>
 
-    <body>
-        <header>
-            <div class="site-header-content">
-                <h1 class="site-title">
-                  NLP by Zahidur
-                </h1>
-                <h2 class="site-description">
-                    Evaluate a news article with Natural Language Processing
-                </h2>
-              </div>
-        </header>
+  <body class="home-template">
+    <div class="site-wrapper">
+      <header class="site-header outer no-cover">
+        <div class="inner">
+          <div class="site-header-content">
+            <h2 class="site-title">
+              Travel Planner
+            </h2>
+            <h3 class="site-description">
+              Plan your next travel
+            </h3>
+          </div>
+        </div>
+      </header>
 
-        <main>
-            <section class="errors">
-                <span class="close-btn" onclick="return Client.closeErrorMsg()">&#10005;</span>
-                <div id="error"></div>
+      <main id="site-main" class="site-main outer" role="main">
+        <div class="inner">
+          <div class="post-feed">
+            <section class="post-card errors">
+              <div id="error">asasas</div>
             </section>
-            <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="url" type="text" name="input" value="" placeholder="Enter an article link">
-                    <input type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </form>
-            <section>
+          </div>
+          <div class="post-feed">
+            <section class="post-card post section-form">
+              <form id="add-trip-form">
+                <div>
+                  <label for="city"> My trip to:</label>
+                  <input
+                    type="text"
+                    id="city"
+                    required
+                    placeholder="Enter a Location (e.g. Stockholm)"
+                  />
+                </div>
 
-            <section>
-                <ul>
-                    <li>
-                        <strong>Text Polarity:</strong>
-                        <p id="polarity"></p>
-                        <strong>Text Subjectivity:</strong>
-                        <p id="subjectivity"></p>
-                        <strong>Polarity Confidence:</strong>
-                        <p id="polarity_confidence"></p>
-                        <strong>Subjectivity Confidence:</strong>
-                        <p id="subjectivity_confidence"></p>
-                        <strong>Text Excerpt:</strong>
-                        <h4 id="full_text"></h4>
-                    </li>
-                </ul>
+                <div>
+                  <label for="date">Departing:</label>
+                  <input
+                    type="date"
+                    id="date"
+                    required
+                    placeholder="yyyy/mm/dd"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="submit"
+                    onclick="return Client.addHandleSubmit.addHandleSubmit(event)"
+                    value="Add Trip"
+                  />
+                  <input
+                    type="button"
+                    onclick="return Client.addHandleSubmit.getList()"
+                    value="Show All Trips"
+                  />
+                </div>
+              </form>
             </section>
-        </main>
+          </div>
+          <div id="result-container"></div>
+        </div>
+      </main>
 
-        <footer>
-            <p>© 2020 Zahidur</p>
-        </footer>
-        <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-        </script>
-    </body>
+      <footer class="copyright">
+        <span>© 2020 Zahidur</span>
+      </footer>
+
+      <script>
+        // Check that service workers are supported
+        if ("serviceWorker" in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener("load", () => {
+            navigator.serviceWorker.register("/service-worker.js");
+          });
+        }
+      </script>
+    </div>
+  </body>
 </html>

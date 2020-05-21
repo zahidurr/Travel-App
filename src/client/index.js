@@ -1,12 +1,12 @@
-import { checkForURL } from "./js/inputChecker";
-import { handleSubmit } from "./js/formHandler";
-import { closeErrorMsg } from "./js/handleError";
+import addHandleSubmit from "./js/addHandleSubmit";
+import deleteHandleSubmit from "./js/deleteHandleSubmit";
+import showNotification from "./js/errorHandel";
 
-import "./styles/resets.scss";
-import "./styles/base.scss";
-import "./styles/form.scss";
+import "./styles/global.scss";
+import "./styles/template.scss";
 import "./styles/header.scss";
+import "./styles/post.scss";
+import "./styles/form.scss";
 import "./styles/notification.scss";
-import "./styles/footer.scss";
 
-export { checkForURL, closeErrorMsg, handleSubmit };
+export { deleteHandleSubmit, showNotification, addHandleSubmit };
