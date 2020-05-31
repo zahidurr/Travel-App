@@ -47,6 +47,4 @@ PORT = 8081
 - Express
 - Geonames, Darksky, and Pixabay
 
-### Screenshots
-
 ![Screenshot](screenshots/1.png)
