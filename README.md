@@ -1,4 +1,4 @@
-## Travel Planner
+## Trip Planner
 
 This is a full stack application which creates a RESTful API using Express JS as backend and HTML, CSS, JS, Webpack as frontend. This application allows you to create your own Trip Planner.
 
